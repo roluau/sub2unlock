@@ -1,4 +1,3 @@
-// This script will only manage local admin functionality and links
 document.addEventListener('DOMContentLoaded', () => {
     const linkForm = document.getElementById('linkForm');
     const linksList = document.getElementById('linksList');
@@ -7,12 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const linkType = document.getElementById('linkType').value;
         const unlockLink = document.getElementById('unlockLink').value;
-        addLink(linkType, unlockLink);
+        createLink(linkType, unlockLink);
     });
 
-    function addLink(linkType, unlockLink) {
-        const li = document.createElement('li');
-        li.textContent = `${linkType}: ${unlockLink}`;
-        linksList.appendChild(li);
+    function createLink(linkType, unlockLink) {
+        // Create a new link entry
+        const linkEntry = document.createElement('li');
+        linkEntry.innerHTML = `${linkType}: <a href="${unlockLink}" target="_blank">${unlockLink}</a>`;
+        linksList.appendChild(linkEntry);
+
+        // Simulate link creation (for demo purposes only)
+        // You can't create new HTML files on GitHub Pages dynamically
+        console.log(`Simulated link creation: ${unlockLink}`);
     }
 });
