@@ -11,11 +11,8 @@
 <body>
     <h1>Admin Panel</h1>
     <form id="linkForm">
-        <select id="linkType" required>
-            <option value="subscribe">Subscribe to unlock</option>
-            <option value="like-subscribe">Like & Subscribe to unlock</option>
-        </select><br><br>
-        <input type="url" id="unlockLink" placeholder="Unlock Link" required><br><br>
+        <input type="text" id="linkName" placeholder="Link Name" required><br><br>
+        <input type="text" id="linkContent" placeholder="Link Content" required><br><br>
         <button type="button" onclick="createLink()">Create Link</button>
     </form>
     <h2>Generated Links</h2>
