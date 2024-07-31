@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <form id="linkForm">
+        <select id="linkType" required>
+            <option value="subscribe">Subscribe to unlock</option>
+            <option value="like-subscribe">Like & Subscribe to unlock</option>
+        </select><br><br>
+        <input type="url" id="unlockLink" placeholder="Unlock Link" required><br><br>
+        <button type="button" onclick="createLink()">Create Link</button>
+    </form>
+    <h2>Generated Links</h2>
+    <ul id="linksList"></ul>
+    <script src="admin.js"></script>
+</body>
+</html>
